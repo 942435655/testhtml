@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .active{
+            background: green;
+        }
+
+    </style>
+    <script src="./jquery-2.1.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>辣鸡</li>
+        <li>鬼地方个</li>
+        <li>放空管</li>
+        <li>他非要</li>
+        <li>体育</li>
+        <li>让他汇丰银行</li>
+        <li>入桃花源</li>
+    </ul>
+</body>
+<script>
+    $('li').click(function(){
+        $(this).toggleClass('active');
+        var u = $('li.active').size();
+        if(u > 4){
+            alert('最多只能选择4个');
+            $(this).removeClass('active');
+        }
+        // console.log(u);
+    });
+</script>
+</html>
